@@ -1,0 +1,70 @@
+﻿{
+  "title": "JSON Schema for machines",
+  "type": "object",
+  "properties": {
+    "psexecPath": {
+      "type": "string",
+      "description": "full path of psexec.exe"
+    },
+    "machines": {
+      "type": "array",
+      "description": "specify each remote mahicne configuration",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "ip": {
+            "type": "string",
+            "description": "the remote machine ip address"
+          },
+          "username": {
+            "type": "string",
+            "description": "(optional) the remote machine username"
+          },
+          "password": {
+            "type": "string",
+            "description": "(optional) the remote machine ip address"
+          },
+          "msbuildPath": {
+            "type": "string",
+            "description": "full file path of msbuild.exe on the remote machine"
+          },
+          "tfPath": {
+            "type": "string",
+            "description": "full file path of tf.exe on the remote machine"
+          }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "description": "specify each project configuration",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "basePath": {
+            "type": "string",
+            "description": "base directory for source file location. will be prefixed to the sourcePath"
+          },
+          "sourcePath": {
+            "type": "string",
+            "description": "(optional) files from TFS will be downloaded to this location (local path on remote machine). prefixed with basePath"
+          },
+          "tfsPath": {
+            "type": "string",
+            "description": "TFS source folder. for example $/MyProduct/1.0.0"
+          },
+          "buildProjectPath": {
+            "type": "string",
+            "description": "TFS path of build project to initiate. for example $/MyProduct/1.0.0/test.csproj"
+          },
+          "override": {
+            "type": "boolean",
+            "description": "get all files from TFS and not just the delta"
+          }
+        }
+      }
+    }
+  }
+}

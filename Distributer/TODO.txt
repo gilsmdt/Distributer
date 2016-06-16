@@ -1,0 +1,4 @@
+﻿add support for abort psexec
+add support for automatic workspace creation
+add invoke-command runner
+move msbuild path and tfs from machine object to projects config

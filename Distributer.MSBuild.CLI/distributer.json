@@ -1,0 +1,16 @@
+﻿{
+  "distributerPlugin": "MSBuildPlugin",
+  "psexecPath": "c:\\psexec.exe",
+  "machines": [
+    {
+      "ip": "desktop",
+      "tfPath": "c:\\Program Files(x86)\\Microsoft Visual Studio 14.0\\Common7\\IDE\\tf.exe",
+      "msbuildPath": "C:\\Program Files (x86)\\MSBuild\\14.0\\Bin\\MSBuild.exe"
+    },
+    {
+      "ip": "desktop",
+      "tfPath": "c:\\Program Files(x86)\\Microsoft Visual Studio 14.0\\Common7\\IDE\\tf.exe",
+      "msbuildPath": "C:\\Program Files (x86)\\MSBuild\\14.0\\Bin\\MSBuild.exe"
+    }
+  ]
+}
